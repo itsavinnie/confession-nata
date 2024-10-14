@@ -1,24 +1,45 @@
+/* Basic styling */
 body {
-    background-color: #f0f8ff;
-    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
+/* Heart background */
+.heart-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://media.giphy.com/media/l3vR0zlfRrV8M2kTm/giphy.gif') repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Container styling */
 .container {
-    margin-top: 10%;
+    margin-top: 5%;
+    border-radius: 15px;
+    background: rgba(255, 182, 193, 0.6);
+    padding: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    display: inline-block;
 }
 
+/* Text styling */
 h1 {
     font-size: 2.5em;
     color: #ff69b4;
+    animation: heartbeat 1.5s infinite;
 }
 
 p {
     font-size: 1.5em;
 }
 
+/* Button styling */
 .buttons {
     margin: 20px 0;
 }
@@ -28,20 +49,42 @@ button {
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 20px;
     border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 #yesButton {
-    background-color: #32cd32;
+    background-color: #ffb6c1;
     color: white;
 }
 
 #noButton {
-    background-color: #ff6347;
+    background-color: #ffc0cb;
     color: white;
 }
 
+/* Cat GIF styling */
 .cat-gif {
     margin-top: 30px;
+}
+
+.cat-gif img {
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
 }
