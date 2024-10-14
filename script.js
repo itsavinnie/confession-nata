@@ -1,9 +1,7 @@
 document.getElementById("yesButton").addEventListener("click", function() {
-    alert("Yay! I knew you'd say yes! 🥰💖");
-    document.getElementById("catGif").src = "https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif";
+    window.location.href = "yes.html"; // Redirect to the "Yes" page
 });
 
 document.getElementById("noButton").addEventListener("click", function() {
-    alert("Oh no... 😢💔");
-    document.getElementById("catGif").src = "https://media.giphy.com/media/6uMqzcbWRhoT6/giphy.gif";
+    window.location.href = "no.html"; // Redirect to the "No" page
 });
