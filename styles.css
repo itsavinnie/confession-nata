@@ -1,107 +1,94 @@
-/* Basic styling */
 body {
-    background-color: #fff0f5;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
 }
 
-/* Heart background */
-.heart-background {
-    position: absolute;
+.parallax {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    background: url('https://media.giphy.com/media/l3vR0zlfRrV8M2kTm/giphy.gif') repeat;
-    opacity: 0.2;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: -1;
+    filter: blur(3px);
 }
 
-/* Container styling */
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    background: url('hearts.png') repeat;
+    animation: floatHearts 20s infinite linear;
+}
+
+@keyframes floatHearts {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -1000px; }
+}
+
 .container {
-    margin-top: 5%;
-    border-radius: 15px;
-    background: rgba(255, 182, 193, 0.6);
-    padding: 20px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-    display: inline-block;
+    margin-top: 20%;
+    animation: fadeIn 2s ease-in-out;
 }
 
-/* Text styling */
-h1 {
-    font-size: 2.5em;
-    color: #ff69b4;
-    animation: heartbeat 1.5s infinite;
+.animated-text {
+    animation: textAppear 2s ease-in-out;
 }
 
-p {
-    font-size: 1.5em;
-}
-
-/* Button styling */
-.buttons {
-    margin: 20px 0;
-}
-
-button {
-    font-size: 1.2em;
-    padding: 10px 20px;
+.buttons button {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
     margin: 10px;
     cursor: pointer;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
-button:hover {
+.buttons button:hover {
     transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.5);
 }
 
-#yesButton {
-    background-color: #ffb6c1;
-    color: white;
-}
-
-#noButton {
-    background-color: #ffc0cb;
-    color: white;
-}
-
-/* Cat GIF styling */
-.cat-gif {
-    margin-top: 30px;
-}
-
-.cat-gif img {
-    border-radius: 15px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Animations */
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-}
-
-/* Styling for back link */
-.back-link {
-    display: inline-block;
+.hover-zoom {
+    width: 200px;
+    height: auto;
     margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ffb6c1;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease;
 }
 
-.back-link:hover {
-    background-color: #ff69b4;
+.hover-zoom:hover {
+    transform: scale(1.2);
+}
+
+.mute-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes textAppear {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }

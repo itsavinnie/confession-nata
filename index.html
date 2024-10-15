@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="heart-background"></div>
+    <div class="parallax"></div>
+    <div class="floating-hearts"></div>
     <div class="container">
-        <h1>Hi, Nata!!💕</h1>
-        <p>I have a little secret... 🥺</p>
-        <p>I've feeling for you and will you be my girlfriend? 🐱💕</p>
+        <h1 class="animated-text">Hey [Crush's Name],</h1>
+        <p class="animated-text">I've had a crush on you for a while... Will you be my girlfriend?</p>
         <div class="buttons">
-            <button id="yesButton">Yes! 🥰</button>
-            <button id="noButton">No... 😢</button>
+            <button class="yes-button" onclick="window.location.href='yes.html'">Yes</button>
+            <button class="no-button" onclick="window.location.href='no.html'">No</button>
         </div>
         <div class="cat-gif">
-            <img id="catGif" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cat Gif">
+            <img src="cat.gif" alt="Cute Cat GIF" class="hover-zoom">
         </div>
     </div>
+    <audio id="background-music" autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button onclick="toggleMusic()" class="mute-button">Mute/Unmute Music</button>
     <script src="script.js"></script>
 </body>
 </html>
