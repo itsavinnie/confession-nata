@@ -6,16 +6,16 @@
     <title>Oh No...</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body onload="checkMusicState()">
+<body class="fade-in">
     <div class="container">
         <h1 class="animated-text">It's Okay 😢</h1>
-        <p class="animated-text">I understand... You're still amazing, and I hope we can remain friends. "Never give up on something you truly believe in."</p>
-        <div class="cat-gif">
-            <img src="catno.gif" alt="Sad Cat GIF" class="hover-zoom">
+        <p class="animated-text">I understand... You're still amazing, and I hope we can remain friends.</p>
+        <div class="cat-gif slide-in">
+            <img src="https://media.giphy.com/media/9J7tdYltWyXIY/giphy.gif" alt="Sad Cat GIF" class="hover-zoom">
         </div>
     </div>
     <audio id="background-music" loop>
-        <source src="music2.mp3" type="audio/mpeg">
+        <source src="music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <button onclick="toggleMusic()" class="mute-button">Mute/Unmute Music</button>
