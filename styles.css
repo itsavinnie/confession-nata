@@ -133,8 +133,9 @@ p {
 /* Mute/Unmute Button */
 .mute-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 20px; /* Position at the top */
+    right: 20px; /* Right side */
+    z-index: 1000; /* Ensure it's above other elements */
 }
 
 /* Smooth Scrolling */
