@@ -65,6 +65,64 @@ p {
     animation: float 3s ease-in-out infinite;
 }
 
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  /* Adjust body font size for better readability on mobile */
+  body {
+    font-size: 16px;
+  }
+
+  /* Make the header fit the screen width */
+  header {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Stack columns vertically */
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  /* Resize images to fit mobile screens */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust button sizes for touchscreens */
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  /* Navigation menu styling for mobile */
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  /* Adjust layout for tablet devices */
+  .column {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* Header styles for tablets */
+  header {
+    padding: 15px;
+  }
+}
+
 /* Float Animation for GIF */
 @keyframes float {
     0% { transform: translateY(0); }
