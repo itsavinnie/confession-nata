@@ -141,3 +141,26 @@ p {
 html {
     scroll-behavior: smooth;
 }
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure the page fits within the viewport on mobile devices */
+body {
+  overflow-x: hidden;
+}
+
+/* Prevent issues with fixed backgrounds on mobile */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-friendly touch gestures */
+@media only screen and (max-width: 600px) {
+  /* Ensure scrolling works well on touch devices */
+  body {
+    touch-action: manipulation;
+  }
+}
